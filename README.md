@@ -1,13 +1,13 @@
 <!-- <p align="center">
-  <a target='_blank' href='https://mistervaliant.github.io/devaliance/index.html'>
-    <img width=380px src="images/showcase/git-logo.webp" alt="DeValiance" title='DeValiance'/>
+  <a target='_blank' href='https://mistervaliant.github.io/odin-landing/index.html'>
+    <img width=380px src="images/showcase/git-logo.webp" alt="Odin Landing" title='Odin Landing'/>
   </a>
 </p>
 
 <br/> -->
 
 # 🛦 Odin Landing
-> Odin Landing is a landing page for the popular Playstation 2 video game, Ace Combat 5: The Unsung War.
+> Odin Landing is a webpage for the popular Playstation 2 video game, Ace Combat 5: The Unsung War.
 
 >Live demo:
 [https://mistervaliant.github.io/odin-landing/](https://mistervaliant.github.io/odin-landing/ "Odin Landing")
