@@ -15,7 +15,7 @@
 <br/>
 
 ## ✒️ General Information 
-Wake up pilot! We have a target to destroy. 🚀
+Wake up Wardogs! We have a target to destroy. 🚀
 
 Odin Landing is a static website for The Odin Project (TOP) containing information on the PS2 video game, Ace Combat 5: The Unsung War.
 
