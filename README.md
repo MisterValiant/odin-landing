@@ -1,10 +1,10 @@
-<!-- <p align="center">
+<p align="center">
   <a target='_blank' href='https://mistervaliant.github.io/odin-landing/index.html'>
     <img width=380px src="images/showcase/git-logo.webp" alt="Odin Landing" title='Odin Landing'/>
   </a>
 </p>
 
-<br/> -->
+<br/>
 
 # 🛦 Odin Landing
 > Odin Landing is a webpage for the popular Playstation 2 video game, Ace Combat 5: The Unsung War.
@@ -19,7 +19,7 @@ Wake up pilot! We have a target to destroy. 🚀
 
 Odin Landing is a static website for The Odin Project (TOP) containing information on the PS2 video game, Ace Combat 5: The Unsung War.
 
-Discover this fifth installment of the Ace Combat series.
+Discover this fifth installment of the Ace Combat series. Personally, one of the coolest game I have played on the PlayStation 2 console.
 
 **🛈 About Ace Combat 5:**
 
@@ -28,8 +28,7 @@ Ace Combat 5: The Unsung War was developed by Project Aces and released for the
 <br/>
 
 ## ❤️ Motivation
-The main aim of Odin Landing is to better understand how to effectively make use of Flexbox and Grid while applying all the knowledge obtained from the previous project, [Odin Recipes](https://github.com/MisterValiant/odin-recipes "Odin Recipes") and in the Fullstack Web Development curriculum of The Odin Project (TOP) .
-
+The main aim of Odin Landing is to better understand how to effectively make use of Flexbox and Grid while applying all the knowledge obtained from the previous project, [Odin Recipes](https://github.com/MisterValiant/odin-recipes "Odin Recipes") in the Fullstack Web Development curriculum of The Odin Project (TOP). 
 
 <br/>
 
@@ -46,14 +45,14 @@ The main aim of Odin Landing is to better understand how to effectively make use
 
 
 
-<br/>
+<br/> -->
 
 ## 📷 Screenshots
 ![Website showcase](images/showcase/showcase.webp)
 
 <br/>
 
-## 🗺️ Room for Improvement
+<!-- ## 🗺️ Room for Improvement
 Issues:
 - 
 
