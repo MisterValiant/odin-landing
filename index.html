@@ -20,32 +20,57 @@
 
     <header>
         <nav>
+
+            <!-- Navigation: left -->
             <ul class="left-nav">
-                <li><a href="#section1">Section1</a></li>
-                <li><a href="#section2">Section2</a></li>
+                <li><a href="#section1">- Section1 -</a></li>
+                <li><a href="#section2">= Section2 =</a></li>
             </ul>
 
             <div class="logo-container">
-                <a target="_blank" href="https://www.theodinproject.com/">
-                    <img width="500" height="191" src="images/logo.webp" alt="Odin Landing" title="The Odin Project">
-                </a>
+                <div class="logo-container2">
+                    <a target="_blank" href="https://www.theodinproject.com/">
+                        <img width="500" height="191" src="images/logo.webp" alt="Odin Landing"
+                            title="The Odin Project">
+                    </a>
+                </div>
             </div>
 
+            <!-- Navigation: right -->
             <ul class="right-nav">
-                <li><a href="#section3">Section3</a></li>
-                <li><a href="#section4">Section4</a></li>
+                <li><a href="#section3">= Section3 =</a></li>
+                <li><a href="#section4">- Section4 -</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="section1"></section>
-        <section id="section2"></section>
-        <section id="section3"></section>
-        <section id="section4"></section>
+
+        <!-- Main: section 1 -->
+        <section id="section1">
+            <div class="section1-container">
+                <div class="hero">
+                    <p>Hero</p>
+                    <img onclick="fire()" width="500" height="500" src="images/crosshair.webp" alt="Odin Landing Crosshair">
+                </div>
+            </div>
+                <div class="triangle-divider"></div>
+        </section>
+
+        <!-- Main: section 2 -->
+        <section id="section2">
+            <div class="triangle-divider-2"></div>
+        </section>
+
+        <!-- Main: section 3 -->
+        <section id="section3">
+            
+        </section>
     </main>
 
     <footer>
+
+        <!-- Footer: creator-->
         <p class="socials">
             <a title="Github" target="_blank" href="https://github.com/MisterValiant"><i class="ri-github-fill"></i></a>
             <a title="Twitter" target="_blank" href="https://twitter.com/Mist3rValiant"><i
@@ -57,6 +82,7 @@
         <p class="creator">Made with ❤️ by <a target="_blank" href="https://github.com/MisterValiant"
                 class="mv">MisterValiant</a></p>
 
+        <!-- Footer: disclaimer -->
         <div class="disclaimer">
             <a href="#section1">
                 <img width="500" height="191" src="images/logo.webp" alt="Odin Landing" title="The Odin Project">
@@ -77,7 +103,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
     <link rel="stylesheet" href="css/remixicon.css">
 </body>
 

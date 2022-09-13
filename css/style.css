@@ -31,9 +31,9 @@ footer {
 /* Header */
 
 header {
-    height: 66px;
+    height: 48px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     top: 0;
@@ -44,7 +44,6 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    color: white;
 }
 
 nav ul {
@@ -54,56 +53,65 @@ nav ul {
 }
 
 nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: .5s ease-in-out;
     flex-grow: 1;
     list-style: none;
     text-align: center;
-    color: white;
     cursor: pointer;
-}
-
-.left-nav li {
-    background: linear-gradient(to right, rgba(250, 128, 114, 0) 50%, white 50%) left;
-    background-size: 200%;
-}
-
-.left-nav li:hover {
-    background-position: right;
-}
-
-.right-nav li {
-    background: linear-gradient(to left, rgba(250, 128, 114, 0) 50%, white 50%) right;
-    background-size: 200%;
-}
-
-.right-nav li:hover {
-    background-position: left;
-}
-
-.right-nav li a:hover,
-.left-nav li a:hover {
-    transition: .7s ease-in-out;
-    color: black;
-}
-
-nav li {
-    background: linear-gradient(to left, rgba(250, 128, 114, 0) 50%, white 50%) right;
-    background-size: 200%;
-}
-
-nav li a:hover {
-    background-position: top;
+    clip-path: polygon(100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
+    background-image: url(../images/logo-background.webp);
+    height: 120px;
 }
 
 nav li a {
+    transition: .5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    color: white;
+    width: 97%;
+    height: 92%;
     text-decoration: none;
     text-transform: uppercase;
+    clip-path: polygon(100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    margin-bottom: 8px;
+}
+
+nav li a:hover {
+    background-color: rgb(250, 250, 250);
+    color: rgb(200, 87, 125);
+}
+
+.left-nav li:nth-of-type(1),
+.right-nav li:nth-of-type(2) {
+    height: 81px;
+    margin-bottom: 3px;
+}
+
+.left-nav li:nth-of-type(2) {
+    margin-left: 7px;
+    margin-right: 10px;
+}
+
+.right-nav li:nth-of-type(1) {
+    margin-left: 10px;
+    margin-right: 7px;
+}
+
+.left-nav li:nth-of-type(1):hover,
+.right-nav li:nth-of-type(2):hover {
+    height: 100px;
+}
+
+.left-nav li:nth-of-type(2):hover,
+.right-nav li:nth-of-type(1):hover {
+    height: 140px;
 }
 
 /* Header: Logo */
@@ -112,7 +120,7 @@ nav li a {
     transition: .5s ease-in-out;
     width: 220px;
     height: 160px;
-    background-image: url(../images/logo-background.webp);
+    background-color: white;
     background-position: center;
     background-repeat: no-repeat;
     clip-path: polygon(100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
@@ -120,6 +128,14 @@ nav li a {
     align-items: center;
     justify-content: center;
     border-top: 2px dotted rgba(142, 142, 142, 0.388);
+}
+
+.logo-container2 {
+    clip-path: polygon(100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
+    height: 98%;
+    width: 98%;
+    background-image: url(../images/logo-background.webp);
+    margin-bottom: 8px;
 }
 
 .logo-container:hover {
@@ -130,7 +146,7 @@ nav li a {
     transition: .5s ease-in-out;
     width: 100%;
     height: auto;
-    margin-bottom: 35px;
+    margin-top: 28px;
 }
 
 .logo-container img:hover {
@@ -140,15 +156,16 @@ nav li a {
 /* Footer */
 
 footer {
-    height: 480px;
+    height: 385px;
     width: 100%;
     background-image: url(../images/footer-background.webp);
     background-position: center;
-    padding-bottom: 125px;
+    padding-bottom: 185px;
+    clip-path: polygon(50% 15%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
 }
 
-footer p {
-    padding-top: 30px;
+footer p:not(.disclaimer p) {
+    padding-top: 100px;
     margin-bottom: 20px;
 }
 
@@ -246,17 +263,148 @@ footer p {
 
 /* Main */
 
-main{
-    margin-left: 30px;
-    margin-right: 30px;
+.triangle-divider {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 219px;
+    margin-bottom: -10px;
+    bottom: 0;
+    clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
+    z-index: 9;
 }
 
-section {
-    height: 300px;
-    border-bottom: 2px solid red;
-    /* background: linear-gradient(to bottom, transparent 0%, #13191b 100%) */
+.triangle-divider-black {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 219px;
+    margin-bottom: -30px;
+    bottom: 0;
+    clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
+    z-index: 10;
 }
 
+.triangle-divider-white {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 219px;
+    margin-bottom: -58px;
+    bottom: 0;
+    clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
+    z-index: 10;
+}
+
+/* Main: Section 1 */
+
+#section1 {
+    min-height: 100vh;
+    background-image: url(../images/jet-fighter.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section1-container {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(24, 30, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    width: 80%;
+    height: 60%;
+    clip-path: polygon(50% 15%, 100% 0%, 100% 85%, 50% 100%, 0 86%, 0 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    position: relative;
+    clip-path: polygon(50% 15%, 100% 0%, 100% 85%, 50% 100%, 0 86%, 0 0%);
+    width: 98%;
+    height: 95%;
+    margin-top: 5px;
+    margin-right: 6px;
+}
+
+.hero img {
+    position: absolute;
+    top: 38%;
+    left: 45.25%;
+    width: 10%;
+    height: auto;
+    opacity: .8;
+    animation: nudge 3s linear infinite alternate-reverse;
+}
+
+.hero img:hover{
+    cursor: url(../images/missile.gif), pointer;
+}
+
+@keyframes nudge {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+
+    30%{
+        transform: translate(30px, 30px);
+    }
+    
+    50% {
+      transform: translate(-30px, 30px);
+    }
+    
+    80% {
+      transform: translate(30px, -30px);
+    }
+  }
+  
+
+/* Main: Section 2 */
+
+#section2 {
+    position: relative;
+    height: 500px;
+    background-color: black;
+}
+
+.triangle-divider-2 {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    height: 219px;
+    clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
+}
+
+/* Main: Section 3 */
+
+#section3 {
+    position: relative;
+    height: 500px;
+    background-color: white;
+}
+
+.triangle-divider-3 {
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+    height: 219px;
+    clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
+}
+
+#section4 {
+    background-color: white;
+    height: 500px;
+}
+
+/* Borders */
 
 .borders {
     border-top: 1px solid hsla(0, 0%, 100%, .6);
