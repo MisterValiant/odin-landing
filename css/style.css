@@ -92,6 +92,12 @@ nav li a:hover {
 .right-nav li:nth-of-type(2) {
     height: 81px;
     margin-bottom: 3px;
+    width: 95px;
+}
+
+.left-nav li:nth-of-type(2),
+.right-nav li:nth-of-type(1) {
+    width: 100px;
 }
 
 .left-nav li:nth-of-type(2) {
@@ -332,21 +338,57 @@ footer p:not(.disclaimer p) {
     margin-right: 6px;
 }
 
-.hero img {
+.hero img:nth-of-type(1) {
     position: absolute;
     top: 38%;
     left: 45.25%;
     width: 10%;
     height: auto;
     opacity: .8;
-    animation: nudge 3s linear infinite alternate-reverse;
+    animation: nudge-animation 3s linear infinite alternate-reverse;
+    z-index: 5;
+}
+
+.target-status{
+    writing-mode: vertical-rl;
+    margin-top: 13px;
+    color: rgba(255, 255, 255, 0.514);
+    font-weight: normal;
+}
+
+.destroyed{
+    color: rgba(0, 255, 68, 0.514);
+}
+
+.missed{
+    color:  rgba(253, 108, 108, 0.514);
+}
+
+.target-status span{
+    font-size: x-large;
 }
 
 .hero img:hover{
     cursor: url(../images/missile.gif), pointer;
 }
 
-@keyframes nudge {
+.blink{
+    animation: blink-animation .5s steps(5, start) infinite;
+    -webkit-animation: blink-animation .5s steps(5, start) infinite;
+}
+
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+
+@keyframes nudge-animation {
     0%, 100% {
       transform: translate(0, 0);
     }
