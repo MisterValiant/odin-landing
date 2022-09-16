@@ -338,74 +338,143 @@ footer p:not(.disclaimer p) {
     margin-right: 6px;
 }
 
-.hero img:nth-of-type(1) {
+.target-status {
+    margin-top: 13px;
+    writing-mode: vertical-rl;
+    color: rgba(255, 255, 255, 0.514);
+    font-weight: normal;
+    height: 50%;
+}
+
+.destroyed {
+    color: rgba(0, 255, 68, 0.514);
+}
+
+.missed {
+    color: rgba(255, 13, 0, 0.514);
+}
+
+.target-status span {
+    font-size: x-large;
+}
+
+.hero .npc {
+    position: relative;
+    font-size: 15px;
+    margin-left: 60px;
+    margin-top: 30px;
+    color: white;
+    width: 35%;
+    height: 25%;
+    opacity: .75;
+}
+
+.hero .npc p {
+    width: 68%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    margin-top: 4.5px;
+}
+
+.hero .npc strong {
+    background-color: #fff;
+    color: black;
+}
+
+.hero .npc a,
+.missile a {
+    padding: 3px;
+    color: rgb(115, 170, 31);
+    text-transform: uppercase;
+    padding-left: 0;
+    font-size: 13.5px;
+    text-decoration: none;
+    cursor: help;
+}
+
+.hero .npc img {
+    float: left;
+    width: 107px;
+    height: auto;
+    filter: brightness(80%);
+}
+
+.hero .crosshair {
     position: absolute;
     top: 38%;
     left: 45.25%;
-    width: 10%;
+    width: 120px;
     height: auto;
     opacity: .8;
     animation: nudge-animation 3s linear infinite alternate-reverse;
     z-index: 5;
-}
-
-.target-status{
-    writing-mode: vertical-rl;
-    margin-top: 13px;
-    color: rgba(255, 255, 255, 0.514);
-    font-weight: normal;
-}
-
-.destroyed{
-    color: rgba(0, 255, 68, 0.514);
-}
-
-.missed{
-    color:  rgba(253, 108, 108, 0.514);
-}
-
-.target-status span{
-    font-size: x-large;
-}
-
-.hero img:hover{
     cursor: url(../images/missile.gif), pointer;
 }
 
-.blink{
+.hero .radar {
+    position: absolute;
+    width: 102px;
+    height: auto;
+    right: 4.5%;
+    bottom: 15%;
+    filter: hue-rotate(250deg) contrast(140%);
+    background-color: darkgray;
+    border-radius: 120px;
+    opacity: .4;
+}
+
+.hero .missile {
+    position: absolute;
+    bottom: 14%;
+    right: 19.5%;
+    color: white;
+    font-size: 15px;
+    opacity: .7;
+    text-align: right;
+}
+
+.hero .missile b {
+    background-color: #fff;
+    color: black;
+}
+
+.hero .missile span{
+    display: Inline-block;
+}
+
+.hero .missile .left-arrow {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.flare {
+    position: absolute;
+    top: 47px;
+    right: 0;
+    clip-path: polygon(0% 1.15%, 100% 0%, 100% 99.2%, 0% 100%);
+    background-color: rgba(255, 255, 255, 0.514);
+    width: 5px;
+    height: 120px;
+}
+
+.flare-2 {
+    position: absolute;
+    top: 50px;
+    right: 8px;
+    clip-path: polygon(0% 2.8%, 100% 0%, 100% 98%, 0% 100%);
+    background-color: rgba(255, 255, 255, 0.514);
+    width: 5px;
+    height: 50px;
+}
+
+.blink {
     animation: blink-animation .5s steps(5, start) infinite;
     -webkit-animation: blink-animation .5s steps(5, start) infinite;
 }
-
-  @keyframes blink-animation {
-    to {
-      visibility: hidden;
-    }
-  }
-  @-webkit-keyframes blink-animation {
-    to {
-      visibility: hidden;
-    }
-  }
-
-@keyframes nudge-animation {
-    0%, 100% {
-      transform: translate(0, 0);
-    }
-
-    30%{
-        transform: translate(30px, 30px);
-    }
-    
-    50% {
-      transform: translate(-30px, 30px);
-    }
-    
-    80% {
-      transform: translate(30px, -30px);
-    }
-  }
-  
 
 /* Main: Section 2 */
 
@@ -445,6 +514,41 @@ footer p:not(.disclaimer p) {
     background-color: white;
     height: 500px;
 }
+
+/* Animation */
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes nudge-animation {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    30% {
+        transform: translate(30px, 30px);
+    }
+
+    50% {
+        transform: translate(-30px, 30px);
+    }
+
+    80% {
+        transform: translate(30px, -30px);
+    }
+}
+
 
 /* Borders */
 
