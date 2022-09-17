@@ -25,16 +25,16 @@ body {
 
 header,
 footer {
-    z-index: 999;
+    z-index: 5;
 }
 
 /* Header */
 
 header {
+    position: fixed;
     height: 48px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    position: fixed;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     top: 0;
 }
@@ -47,9 +47,9 @@ nav {
 }
 
 nav ul {
+    display: flex;
     width: 25%;
     height: 66px;
-    display: flex;
 }
 
 nav li {
@@ -67,10 +67,10 @@ nav li {
 }
 
 nav li a {
-    transition: .5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .5s ease-in-out;
     width: 97%;
     height: 92%;
     text-decoration: none;
@@ -123,6 +123,9 @@ nav li a:hover {
 /* Header: Logo */
 
 .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: .5s ease-in-out;
     width: 220px;
     height: 160px;
@@ -130,9 +133,6 @@ nav li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     clip-path: polygon(100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-top: 2px dotted rgba(142, 142, 142, 0.388);
 }
 
@@ -269,37 +269,31 @@ footer p:not(.disclaimer p) {
 
 /* Main */
 
-.triangle-divider {
+.triangle-divider,
+.triangle-divider-black,
+.triangle-divider-white {
     position: absolute;
-    background-color: black;
     width: 100%;
     height: 219px;
-    margin-bottom: -10px;
     bottom: 0;
     clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
-    z-index: 9;
+    z-index: 3;
+}
+
+.triangle-divider {
+    background-color: black;
+    margin-bottom: -10px;
 }
 
 .triangle-divider-black {
     position: absolute;
-    background-color: white;
-    width: 100%;
-    height: 219px;
+    background-color: black;
     margin-bottom: -30px;
-    bottom: 0;
-    clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
-    z-index: 10;
 }
 
 .triangle-divider-white {
-    position: absolute;
     background-color: white;
-    width: 100%;
-    height: 219px;
     margin-bottom: -58px;
-    bottom: 0;
-    clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
-    z-index: 10;
 }
 
 /* Main: Section 1 */
@@ -314,6 +308,9 @@ footer p:not(.disclaimer p) {
 
 .section1-container {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -324,9 +321,6 @@ footer p:not(.disclaimer p) {
     width: 80%;
     height: 60%;
     clip-path: polygon(50% 15%, 100% 0%, 100% 85%, 50% 100%, 0 86%, 0 0%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .hero {
@@ -370,9 +364,9 @@ footer p:not(.disclaimer p) {
 }
 
 .hero .npc p {
+    position: absolute;
     width: 68%;
     height: 100%;
-    position: absolute;
     right: 0;
     margin-top: 4.5px;
 }
@@ -407,8 +401,7 @@ footer p:not(.disclaimer p) {
     width: 120px;
     height: auto;
     opacity: .8;
-    animation: nudge-animation 3s linear infinite alternate-reverse;
-    z-index: 5;
+    z-index: 3;
     cursor: url(../images/missile.gif), pointer;
 }
 
@@ -426,8 +419,8 @@ footer p:not(.disclaimer p) {
 
 .hero .missile {
     position: absolute;
-    bottom: 14%;
-    right: 19.5%;
+    bottom: 14.4%;
+    right: 18.6%;
     color: white;
     font-size: 15px;
     opacity: .7;
@@ -439,7 +432,7 @@ footer p:not(.disclaimer p) {
     color: black;
 }
 
-.hero .missile span{
+.hero .missile span {
     display: Inline-block;
 }
 
@@ -451,29 +444,25 @@ footer p:not(.disclaimer p) {
     transform: scale(-1, 1);
 }
 
-.flare {
+.flare,
+.flare-2 {
     position: absolute;
+    width: 5px;
+    background-color: rgba(255, 255, 255, 0.514);
+}
+
+.flare {
     top: 47px;
     right: 0;
     clip-path: polygon(0% 1.15%, 100% 0%, 100% 99.2%, 0% 100%);
-    background-color: rgba(255, 255, 255, 0.514);
-    width: 5px;
     height: 120px;
 }
 
 .flare-2 {
-    position: absolute;
     top: 50px;
     right: 8px;
     clip-path: polygon(0% 2.8%, 100% 0%, 100% 98%, 0% 100%);
-    background-color: rgba(255, 255, 255, 0.514);
-    width: 5px;
     height: 50px;
-}
-
-.blink {
-    animation: blink-animation .5s steps(5, start) infinite;
-    -webkit-animation: blink-animation .5s steps(5, start) infinite;
 }
 
 /* Main: Section 2 */
@@ -515,7 +504,22 @@ footer p:not(.disclaimer p) {
     height: 500px;
 }
 
-/* Animation */
+/* Animations */
+
+.blink {
+    animation: blink-animation .5s steps(5, start) infinite;
+    -webkit-animation: blink-animation .5s steps(5, start) infinite;
+}
+
+.blink3s {
+    animation: blink-animation .3s steps(3, start) infinite;
+    -webkit-animation: blink-animation .3s steps(3, start) infinite;
+}
+
+.nudge {
+    animation: nudge-animation 3s linear infinite alternate-reverse;
+    -webkit-animation: nudge-animation 3s linear infinite alternate-reverse;
+}
 
 @keyframes blink-animation {
     to {
@@ -553,8 +557,8 @@ footer p:not(.disclaimer p) {
 /* Borders */
 
 .borders {
-    border-top: 1px solid hsla(0, 0%, 100%, .6);
     position: relative;
+    border-top: 1px solid hsla(0, 0%, 100%, .6);
     border-bottom: 1px solid hsla(0, 0%, 100%, .6)
 }
 

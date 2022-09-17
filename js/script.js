@@ -3,13 +3,17 @@ var targetStatus = document.querySelector(".target-status");
 var targetDestroyed = 0;
 var targetMissed = 0;
 
+var nudgeAnimation = document.querySelector('.crosshair');
+nudgeAnimation.classList.remove('nudge');
+
 window.onload = function () {
-    document.querySelector('.hero').classList.add('blink');
+    document.querySelector('.hero').classList.add('blink3s');
     setTimeout(heroGUI, 2500);
 }
 
-function heroGUI(){
-    document.querySelector('.hero').classList.remove('blink');
+function heroGUI() {
+    document.querySelector('.hero').classList.remove('blink3s');
+    nudgeAnimation.classList.add('nudge');
 }
 
 // Jet Fighter Minigame
@@ -29,7 +33,9 @@ function fire() {
             targetDestroyed = parseInt(targetDestroyed);
             targetMissed = parseInt(targetMissed);
 
-            stats();
+            var missileLoaded = document.querySelector(".missile-loaded");
+            missileLoaded.textContent = 0;
+            missileLoaded.classList.add('blink');
 
             if (Math.floor(Math.random() * (3 - 1 + 1) + 1) == 1) {
                 setTimeout(explosion, 1260);
@@ -78,9 +84,10 @@ function destroy() {
     }
 }
 
+// Minigame: Win
 function fiveDestroyed() {
-    console.log('Woohoo! 5 enemies neutralised! Osea is saved ヽ(•‿•)ノ');
-    alert('Woohoo! 5 enemies neutralised! Osea is saved ヽ(•‿•)ノ');
+    console.log('Woohoo! 5 enemies neutralised. Osea is saved ヽ(•‿•)ノ');
+    alert('Woohoo! 5 enemies neutralised. Osea is saved ヽ(•‿•)ノ');
     resetStats();
 }
 
@@ -99,18 +106,14 @@ function miss() {
     }
 }
 
+// Minigame: Lose
 function tenMissed() {
     console.log('We have sustained too much damage! Retreat to the Kestrel ⚐');
     alert('We have sustained too much damage! Retreat to the Kestrel ⚐');
     resetStats();
 }
 
-function stats() {
-    var missileLoaded = document.querySelector(".missile-loaded");
-    missileLoaded.textContent = 0;
-    missileLoaded.classList.add('blink');
-}
-
+// Reset
 function resetStats() {
     document.querySelector(".missile-loaded").textContent = 1;
     document.querySelector(".neutralised").textContent = 0;
