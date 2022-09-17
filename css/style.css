@@ -469,17 +469,88 @@ footer p:not(.disclaimer p) {
 
 #section2 {
     position: relative;
-    height: 500px;
+    height: 800px;
     background-color: black;
     color: white;
     text-align: center;
 }
 
-.logo{
+.companies {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 30px;
+}
+
+#section2 h2,
+#section2 h6 {
+    font-family: "heavy";
+    text-transform: uppercase;
+}
+
+/* Section 2: Polaroid */
+.polaroid {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.item {
+    position: relative;
+    width: 19%;
+    display: inline-block;
+    filter: grayscale(100%);
+}
+
+.item:nth-of-type(n) {
+    transform: scale(0.75, 0.75) rotate(5deg);
+    transition: all 0.35s;
+}
+
+.item:hover {
+    filter: none;
+    transform: scale(.85, .85) rotate(0deg) !important;
+    transition: all 0.35s;
+}
+
+.polaroid>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.caption {
+    margin-top: 10px;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    line-height: 2em;
+    font-weight: bold;
+    background-color: rgba(128, 128, 128, 0.12);
+    padding: 1px;
+    border-radius: 2px;
+}
+
+.tape{
+    position: absolute;
+    transition: .5s ease-in-out;
+    width: 40%;
+    height: 30px;
+    top: 8px;
+    left: -20px;
+    background-color:rgba(255, 255, 255, 0.6);
+    clip-path: polygon(95% 75%, 100% 50%, 95% 25%, 100% 0%, 0% 0%, 5% 25%, 0% 50%, 5% 75%, 0% 100%, 100% 100%);
+    opacity: 1;
+    rotate: -30deg;
+}
+
+.item:hover .tape{
+    top: 28px;
+    left: -60px;
+    rotate: -45deg;
+    transform: rotateY(90deg);
+    opacity: 0;
 }
 
 .triangle-divider-2 {
@@ -490,6 +561,7 @@ footer p:not(.disclaimer p) {
     height: 219px;
     clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
 }
+
 
 /* Main: Section 3 */
 

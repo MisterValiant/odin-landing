@@ -13,7 +13,7 @@ window.onload = function () {
 }
 
 function dev(){
-    alert('Website still under construction! Come check it out later ;)');
+    // alert('Website still under construction! Come check it out later ;)');
 }
 
 function heroGUI() {
