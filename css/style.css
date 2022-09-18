@@ -155,8 +155,12 @@ nav li a:hover {
     margin-top: 28px;
 }
 
-.logo-container img:hover {
+.logo-container:hover img {
     filter: drop-shadow(0 0 0.5rem rgba(254, 254, 254, 0.37));
+}
+
+.logo-container:hover img {
+    margin-top: 45px;
 }
 
 /* Footer */
@@ -469,7 +473,7 @@ footer p:not(.disclaimer p) {
 
 #section2 {
     position: relative;
-    height: 800px;
+    height: 1035px;
     background-color: black;
     color: white;
     text-align: center;
@@ -479,13 +483,64 @@ footer p:not(.disclaimer p) {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
+
+.companies img{
+    width: 80%;
+    height: auto;
+}
+
+.companies a:nth-child(1) img{
+    width: 44%;
+}
+
+.companies a:nth-child(2) img{
+    width: 43%;
+}
+
+.companies a:nth-child(3) img{
+    width: 51%;
+}
+
+.companies a:nth-of-type(n+2){
+ margin-left: 60px;
+}
+
+.about-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 70px;
+}
+
+.about-divider>div {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 2px;
+    width: 40%;
+    border-radius: 30px;
 }
 
 #section2 h2,
-#section2 h6 {
+#section2 h3 {
     font-family: "heavy";
     text-transform: uppercase;
+    font-size: x-large;
+}
+
+#section2 h2{
+    font-size: 45px;
+}
+
+#section2 h3{
+    margin-bottom: 45px;
+}
+
+.game-images{
+    margin-bottom: 40px;
 }
 
 /* Section 2: Polaroid */
@@ -518,6 +573,7 @@ footer p:not(.disclaimer p) {
     width: 100%;
     height: 100%;
     border-radius: 3px;
+    cursor: url(../images/hand.cur), pointer;
 }
 
 .caption {
@@ -532,25 +588,30 @@ footer p:not(.disclaimer p) {
     border-radius: 2px;
 }
 
-.tape{
+.tape {
     position: absolute;
     transition: .5s ease-in-out;
     width: 40%;
     height: 30px;
     top: 8px;
     left: -20px;
-    background-color:rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     clip-path: polygon(95% 75%, 100% 50%, 95% 25%, 100% 0%, 0% 0%, 5% 25%, 0% 50%, 5% 75%, 0% 100%, 100% 100%);
     opacity: 1;
     rotate: -30deg;
 }
 
-.item:hover .tape{
+.item:hover .tape {
     top: 28px;
     left: -60px;
     rotate: -45deg;
     transform: rotateY(90deg);
     opacity: 0;
+}
+
+.about-description{
+    margin: auto;
+    width: 60%;
 }
 
 .triangle-divider-2 {

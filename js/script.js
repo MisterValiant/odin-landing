@@ -9,11 +9,6 @@ nudgeAnimation.classList.remove('nudge');
 window.onload = function () {
     document.querySelector('.hero').classList.add('blink3s');
     setTimeout(heroGUI, 2500);
-    setTimeout(dev, 3000);
-}
-
-function dev(){
-    // alert('Website still under construction! Come check it out later ;)');
 }
 
 function heroGUI() {
@@ -138,7 +133,7 @@ function resetHUD() {
     document.querySelector('.missile-missed').classList.remove('blink');
 }
 
-// Credits modal
+// Credits: modal
 function credits() {
 
 }
