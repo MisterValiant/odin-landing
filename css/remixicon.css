@@ -22,6 +22,8 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  .ri-star-fill:before { content: "\f186"; }
+  .ri-layout-grid-fill:before { content: "\ee8f"; }
   .ri-github-fill:before { content: "\edca"; }
   .ri-twitter-fill:before { content: "\f23a"; }
   .ri-youtube-fill:before { content: "\f2d4"; }

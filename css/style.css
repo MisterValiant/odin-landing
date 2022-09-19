@@ -219,7 +219,6 @@ footer p:not(.disclaimer p) {
 }
 
 /* Footer: Statement and disclaimer */
-
 .disclaimer {
     display: flex;
     flex-direction: column;
@@ -273,35 +272,18 @@ footer p:not(.disclaimer p) {
 
 /* Main */
 
-.triangle-divider,
-.triangle-divider-black,
-.triangle-divider-white {
+.triangle-divider {
     position: absolute;
     width: 100%;
     height: 219px;
     bottom: 0;
     clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
     z-index: 3;
-}
-
-.triangle-divider {
     background-color: black;
     margin-bottom: -10px;
 }
 
-.triangle-divider-black {
-    position: absolute;
-    background-color: black;
-    margin-bottom: -30px;
-}
-
-.triangle-divider-white {
-    background-color: white;
-    margin-bottom: -58px;
-}
-
 /* Main: Section 1 */
-
 #section1 {
     min-height: 100vh;
     background-image: url(../images/jet-fighter.webp);
@@ -612,7 +594,7 @@ footer p:not(.disclaimer p) {
 .about-description {
     margin: auto;
     width: 60%;
-    padding-bottom: 130px;
+    padding-bottom: 160px;
 }
 
 .triangle-divider-2 {
@@ -624,13 +606,172 @@ footer p:not(.disclaimer p) {
     clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
 }
 
+.white-background {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
 
 /* Main: Section 3 */
 
 #section3 {
     position: relative;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 70px;
+    height: 100%;
     background-color: white;
+}
+
+#section3 h4 {
+    margin-top: 60px;
+    font-family: 'heavy';
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+#section3 h4 i {
+    font-size: small;
+}
+
+.ace7 {
+    transition: .5s ease-in-out;
+    width: 40%;
+    height: auto;
+}
+
+.ace7 img {
+    transition: .5s ease-in-out;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+}
+
+.ace7:hover {
+    transform: scale(1.02, 1.02);
+}
+
+.ace7:hover img {
+    filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.4)) brightness(108%) contrast(105%);
+}
+
+.discover-divider {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.discover-divider .img-ticker {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+    padding-top: 4px;
+}
+
+.discover-divider:before,
+.discover-divider:after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+}
+
+.discover-divider:after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.discover-divider:before {
+    left: 0;
+    top: 0;
+}
+
+.discover-divider img {
+    transition: .5s ease-in-out;
+    height: 30px;
+    width: 30px;
+}
+
+.discover-divider img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+#section3 blockquote {
+    width: 50%;
+}
+
+#section3 q {
+    font-size: larger;
+    font-weight: bold;
+}
+
+#section3 blockquote a {
+    font-family: 'heavy';
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+#section3 blockquote a span {
+    writing-mode: vertical-rl;
+    rotate: 47deg;
+}
+
+.call-to-action {
+    transition: .5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    color: white;
+    background-color: royalblue;
+    width: 50%;
+    height: 100px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    margin-bottom: 35px;
+}
+
+.call-to-action:hover {
+    transform: scale(1.01, 1.01);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.call-to-action p {
+    position: absolute;
+    left: 10%;
+}
+
+.call-to-action a {
+    position: absolute;
+    right: 10%;
+    border: 2px solid white;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.call-to-action a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .triangle-divider-3 {
@@ -640,11 +781,6 @@ footer p:not(.disclaimer p) {
     height: 219px;
     background-color: black;
     clip-path: polygon(50% 85%, 100% 50%, 100% 100%, 0 100%, 0 50%);
-}
-
-#section4 {
-    background-color: white;
-    height: 500px;
 }
 
 /* Animations */
@@ -662,6 +798,10 @@ footer p:not(.disclaimer p) {
 .nudge {
     animation: nudge-animation 3s linear infinite alternate-reverse;
     -webkit-animation: nudge-animation 3s linear infinite alternate-reverse;
+}
+
+.img-ticker {
+    animation: ticker-kf 25s linear infinite;
 }
 
 @keyframes blink-animation {
@@ -690,13 +830,24 @@ footer p:not(.disclaimer p) {
     }
 }
 
+@keyframes ticker-kf {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-78.8rem, 0, 0);
+    }
+}
+
+
 
 /* Borders */
 
 .borders {
     position: relative;
-    border-top: 1px solid hsla(0, 0%, 100%, .6);
-    border-bottom: 1px solid hsla(0, 0%, 100%, .6)
+    border-top: 1px solid rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6)
 }
 
 .borders:before {
@@ -707,8 +858,8 @@ footer p:not(.disclaimer p) {
 .borders:before {
     position: absolute;
     height: 2px;
-    border-left: 20px solid #fff;
-    border-right: 20px solid #fff;
+    border-left: 20px solid black;
+    border-right: 20px solid black;
     content: " ";
     left: 0;
     right: 0
