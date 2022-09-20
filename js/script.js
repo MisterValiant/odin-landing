@@ -94,7 +94,7 @@ function fiveDestroyed() {
 function miss() {
     targetStatus.classList.add("blink");
     targetStatus.classList.add("missed");
-    targetStatus.textContent = 'Target Missed --🛦';
+    targetStatus.textContent = 'Target Missed -- ⮜';
 
     const boom = document.querySelector('.missile-missed');
     targetMissed++;
@@ -124,7 +124,7 @@ function resetHUD() {
     targetStatus.classList.remove("blink");
     targetStatus.classList.remove("destroyed");
     targetStatus.classList.remove("missed");
-    targetStatus.textContent = 'Engage Target --🛦';
+    targetStatus.textContent = 'Engage Target -- ⮜';
 
     const missileLoaded = document.querySelector(".missile-loaded")
     missileLoaded.textContent = 1;
