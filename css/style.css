@@ -784,6 +784,10 @@ footer p:not(.disclaimer p) {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
+.call-to-action a b{
+    font-family: sans-serif;
+}
+
 /* Animations */
 
 .blink {
