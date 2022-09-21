@@ -336,16 +336,16 @@ footer p:not(.disclaimer p) {
     height: 50%;
 }
 
+.target-status span {
+    font-size: 16px;
+}
+
 .destroyed {
     color: rgba(0, 255, 68, 0.514);
 }
 
 .missed {
     color: rgba(255, 13, 0, 0.514);
-}
-
-.target-status span {
-    font-size: x-large;
 }
 
 .hero .npc {
@@ -745,6 +745,7 @@ footer p:not(.disclaimer p) {
 
 .call-to-action {
     transition: .5s ease-in-out;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -778,14 +779,16 @@ footer p:not(.disclaimer p) {
     color: white;
     padding: 10px;
     border-radius: 2px;
+    padding-right: 30px;
 }
 
 .call-to-action a:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-.call-to-action a b{
-    font-family: sans-serif;
+.call-to-action a span{
+    position: absolute;
+    right: 8px;
 }
 
 /* Animations */

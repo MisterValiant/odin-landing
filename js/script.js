@@ -1,5 +1,7 @@
 let fireAudio = new Audio('audio/missile-launch.wav');
 const targetStatus = document.querySelector(".target-status");
+const targetStatusText = document.querySelector(".target-status span:nth-of-type(1)");
+const targetStatusEmoji = document.querySelector(".target-status span:nth-of-type(2)");
 let targetDestroyed = 0;
 let targetMissed = 0;
 
@@ -15,6 +17,16 @@ function heroGUI() {
     document.querySelector('.hero').classList.remove('blink3s');
     nudgeAnimation.classList.add('nudge');
 }
+
+// Navbar
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        
+      } else {
+        
+      }
+};
+
 
 // Jet Fighter Minigame
 function fire() {
@@ -65,7 +77,8 @@ function explosion() {
     boom.classList.add('blink');
     boom.textContent = targetDestroyed;
 
-    targetStatus.textContent = 'Target Down --✴';
+    targetStatusText.textContent = 'Target Down -- ';
+    targetStatusEmoji.innerHTML = '<i class="ri-fire-fill"></i>';
     const destroyAudio = new Audio('audio/explosion.wav');
     fireAudio.volume = 0.09;
     destroyAudio.volume = 0.18;
@@ -94,7 +107,8 @@ function fiveDestroyed() {
 function miss() {
     targetStatus.classList.add("blink");
     targetStatus.classList.add("missed");
-    targetStatus.textContent = 'Target Missed -- ⮜';
+    targetStatusText.textContent = 'Target Missed -- ';
+    targetStatusEmoji.innerHTML = '<i class="ri-plane-fill"></i>';
 
     const boom = document.querySelector('.missile-missed');
     targetMissed++;
@@ -124,7 +138,8 @@ function resetHUD() {
     targetStatus.classList.remove("blink");
     targetStatus.classList.remove("destroyed");
     targetStatus.classList.remove("missed");
-    targetStatus.textContent = 'Engage Target -- ⮜';
+    targetStatusText.textContent = 'Engage Target -- ';
+    targetStatusEmoji.innerHTML = '<i class="ri-plane-fill"></i>';
 
     const missileLoaded = document.querySelector(".missile-loaded")
     missileLoaded.textContent = 1;
