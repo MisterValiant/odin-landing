@@ -1,4 +1,5 @@
 let fireAudio = new Audio('audio/missile-launch.wav');
+const changeNav = document.querySelector("nav");
 const targetStatus = document.querySelector(".target-status");
 const targetStatusText = document.querySelector(".target-status span:nth-of-type(1)");
 const targetStatusEmoji = document.querySelector(".target-status span:nth-of-type(2)");
@@ -9,6 +10,41 @@ const nudgeAnimation = document.querySelector('.crosshair');
 nudgeAnimation.classList.remove('nudge');
 
 window.onload = function () {
+    document.querySelector('body').classList.add('no-overflow');
+    document.querySelector('html').classList.add('no-overflow');
+    setTimeout(load, 4000);
+}
+
+// Loading animations
+function load() {
+    document.querySelector('.loading-content').style.opacity = 0;
+    setTimeout(logo, 1000);
+}
+
+function logo() {
+    document.querySelector('.promo-content').style.opacity = 1;
+    setTimeout(logoOut, 1500);
+}
+
+function logoOut() {
+    document.querySelector('.promo-content').style.opacity = 0;
+    setTimeout(mv, 1500);
+}
+
+function mv() {
+    document.querySelector('.mistervaliant').style.opacity = 1;
+    setTimeout(mvOut, 1500);
+}
+
+function mvOut() {
+    document.querySelector('.mistervaliant').style.opacity = 0;
+    setTimeout(blink, 1500);
+}
+
+function blink(){
+    document.querySelector('.modals').classList.add('modalout');
+    document.querySelector('body').classList.remove('no-overflow');
+    document.querySelector('html').classList.remove('no-overflow');
     document.querySelector('.hero').classList.add('blink3s');
     setTimeout(heroGUI, 2500);
 }
@@ -19,12 +55,12 @@ function heroGUI() {
 }
 
 // Navbar
-window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        
-      } else {
-        
-      }
+window.onscroll = function () {
+    if (document.body.scrollTop > 570 || document.documentElement.scrollTop > 570) {
+        changeNav.classList.add('change-nav');
+    } else {
+        changeNav.classList.remove('change-nav');
+    }
 };
 
 
@@ -148,7 +184,11 @@ function resetHUD() {
     document.querySelector('.missile-missed').classList.remove('blink');
 }
 
-// Credits: modal
+// Modals
 function credits() {
+
+}
+
+function videoModal() {
 
 }

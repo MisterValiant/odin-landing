@@ -18,8 +18,43 @@
 
 <body>
 
+    <!-- Modals -->
+    <div class="modals">
+
+        <!-- Modal: Loading screen -->
+        <div class="loading-screen">
+            <div class="loading-content">
+                <div class="cube">
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                    <h1>ACE<br />COMBAT</h1>
+                </div>
+                <p>Loading...</p>
+            </div>
+
+            <div class="promo-content">
+                <img src="images/logo.webp" width="500" height="191" alt="Odin Landing">
+            </div>
+
+            <div class="mistervaliant">
+                <img src="images/mistervaliant.webp" width="900" height="900" alt="Odin Landing">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
     <header>
-        <nav class="normal-nav">
+        <nav>
 
             <!-- Navigation: left -->
             <ul class="left-nav">
@@ -38,7 +73,7 @@
 
             <!-- Navigation: right -->
             <ul class="right-nav">
-                <li><a href="#section2-3">= Gallery =</a></li>
+                <li><a href="#section3">= Gallery =</a></li>
                 <li><a href="#footer" onclick="credits()">- Credits -</a></li>
             </ul>
         </nav>
@@ -50,7 +85,8 @@
         <section id="section1">
             <div class="section1-container">
                 <div class="hero">
-                    <p class="target-status"><span>Engage Target -- </span><span><i class="ri-plane-fill"></i></span></p>
+                    <p class="target-status"><span>Engage Target -- </span><span><i class="ri-plane-fill"></i></span>
+                    </p>
 
                     <!-- Section 1: NPC -->
                     <div class="npc">
@@ -154,17 +190,19 @@
                 Blaze and his wingmen unwittingly carry out the Razgriz prophecy and discover the conspiracy pulling the
                 strings behind the war.</p>
 
-            <div id="section2-3" class="triangle-divider-2"></div>
+            <div class="triangle-divider-2"></div>
             <div class="white-background"></div>
         </section>
 
         <!-- Main: section 3 -->
         <section id="section3">
 
-            <h4><i class="ri-star-fill"></i>&nbsp;Discover&nbsp;<i class="ri-star-fill"></i><br /> Ace Combat 7: Skies Unknown</h4>
+            <h4><i class="ri-star-fill"></i>&nbsp;Discover&nbsp;<i class="ri-star-fill"></i><br /> Ace Combat 7: Skies
+                Unknown</h4>
 
             <div class="borders ace7">
-                <img src="images/ace7.webp" width="1200" height="630" alt="Ace Comnbat 7" title="Watch Ace Combat 7">
+                <img src="images/ace7.webp" onclick="videoModal()" width="1200" height="630" alt="Ace Comnbat 7"
+                    title="Watch Ace Combat 7">
             </div>
 
             <div class="discover-divider">
