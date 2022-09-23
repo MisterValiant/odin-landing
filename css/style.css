@@ -855,7 +855,8 @@ footer p:not(.disclaimer p) {
 }
 
 .modalout .loading-content,
-.modalout .promo-content {
+.modalout .promo-content,
+.modalout .video-modal {
     display: none;
 }
 
@@ -903,6 +904,98 @@ footer p:not(.disclaimer p) {
 
 .no-overflow {
     overflow: hidden;
+}
+
+.modals .video-player,
+.modals .credits {
+    display: none;
+    z-index: -6;
+}
+
+/* Modal: video & credits */
+
+.video-modal,
+.credits-modal {
+    transition: .3s ease-in-out;
+    opacity: 0;
+    display: initial;
+    z-index: 6;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.video-modal .loading-screen,
+.credits-modal .loading-screen,
+.credits-modal .video-player {
+    display: none;
+    z-index: -6;
+}
+
+.video-modal .video-player,
+.credits-modal .credits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+}
+
+.video-modal .video-container,
+.credits .credits-container {
+    position: relative;
+    width: 85%;
+    height: 85%;
+    color: white;
+    font-size: 45px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    border-radius: 3px;
+}
+
+.video-container p,
+.credits p:nth-of-type(1) {
+    position: absolute;
+    right: 28px;
+    top: 15px;
+    cursor: url(../images/hand.cur), pointer;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 80%;
+    margin-right: 30px;
+}
+
+.credits p:nth-of-type(2) {
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 15%;
+    right: 15%;
+    text-align: left;
+    font-size: x-large;
+}
+
+.credits p:nth-of-type(2) span{
+    display: inline-block;
+    rotate: 90deg;
+    margin-right: 10px;
+}
+
+.credits p:nth-of-type(2) a{
+    padding: 2px;
+    color: #f2be00;
+    text-decoration: none;
+}
+
+.credits p:nth-of-type(2) a:hover{
+    padding: 2px;
+    background-color: #f2be00;
+    border-radius: 1px;
+    color: black;
 }
 
 /* Animations */

@@ -3,6 +3,7 @@ const changeNav = document.querySelector("nav");
 const targetStatus = document.querySelector(".target-status");
 const targetStatusText = document.querySelector(".target-status span:nth-of-type(1)");
 const targetStatusEmoji = document.querySelector(".target-status span:nth-of-type(2)");
+const modal = document.querySelector('.modals');
 let targetDestroyed = 0;
 let targetMissed = 0;
 
@@ -41,8 +42,8 @@ function mvOut() {
     setTimeout(blink, 1500);
 }
 
-function blink(){
-    document.querySelector('.modals').classList.add('modalout');
+function blink() {
+    modal.classList.add('modalout');
     document.querySelector('body').classList.remove('no-overflow');
     document.querySelector('html').classList.remove('no-overflow');
     document.querySelector('.hero').classList.add('blink3s');
@@ -186,9 +187,27 @@ function resetHUD() {
 
 // Modals
 function credits() {
-
+    modal.classList.remove('modalout');
+    modal.classList.add('credits-modal');
+    document.querySelector('.credits-modal').style.opacity = 1;
 }
 
 function videoModal() {
+    modal.classList.remove('modalout');
+    modal.classList.add('video-modal');
+    document.querySelector('.video-modal').style.opacity = 1;
+}
 
+function closeVideo() {
+    document.querySelector('.video-modal').style.opacity = 0;
+    modal.classList.remove('video-modal');
+    modal.classList.add('modalout');
+    // Add ?enablejsapi=1 to iframe src
+    document.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}
+
+function closeCredits() {
+    document.querySelector('.credits-modal').style.opacity = 0;
+    modal.classList.remove('credits-modal');
+    modal.classList.add('modalout');
 }
