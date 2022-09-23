@@ -1,20 +1,37 @@
-let fireAudio = new Audio('audio/missile-launch.wav');
-const changeNav = document.querySelector("nav");
-const targetStatus = document.querySelector(".target-status");
-const targetStatusText = document.querySelector(".target-status span:nth-of-type(1)");
-const targetStatusEmoji = document.querySelector(".target-status span:nth-of-type(2)");
-const modal = document.querySelector('.modals');
-let targetDestroyed = 0;
-let targetMissed = 0;
-
-const nudgeAnimation = document.querySelector('.crosshair');
-nudgeAnimation.classList.remove('nudge');
-
 window.onload = function () {
     document.querySelector('body').classList.add('no-overflow');
     document.querySelector('html').classList.add('no-overflow');
     setTimeout(load, 4000);
 }
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 570 || document.documentElement.scrollTop > 570) {
+        changeNav.classList.add('change-nav');
+        topButton.classList.add('show-btn');
+    } else {
+        changeNav.classList.remove('change-nav');
+        topButton.classList.remove('show-btn');
+    }
+};
+
+// Global variables
+let fireAudio = new Audio('audio/missile-launch.wav');
+const changeNav = document.querySelector("nav");
+
+// Global: target
+const targetStatus = document.querySelector(".target-status");
+const targetStatusText = document.querySelector(".target-status span:nth-of-type(1)");
+const targetStatusEmoji = document.querySelector(".target-status span:nth-of-type(2)");
+
+// Global: modal 
+const modal = document.querySelector('.modals');
+const topButton = document.querySelector('.top-btn');
+let targetDestroyed = 0;
+let targetMissed = 0;
+
+// Remove default animation
+const nudgeAnimation = document.querySelector('.crosshair');
+nudgeAnimation.classList.remove('nudge');
 
 // Loading animations
 function load() {
@@ -54,16 +71,6 @@ function heroGUI() {
     document.querySelector('.hero').classList.remove('blink3s');
     nudgeAnimation.classList.add('nudge');
 }
-
-// Navbar
-window.onscroll = function () {
-    if (document.body.scrollTop > 570 || document.documentElement.scrollTop > 570) {
-        changeNav.classList.add('change-nav');
-    } else {
-        changeNav.classList.remove('change-nav');
-    }
-};
-
 
 // Jet Fighter Minigame
 function fire() {
@@ -210,4 +217,10 @@ function closeCredits() {
     document.querySelector('.credits-modal').style.opacity = 0;
     modal.classList.remove('credits-modal');
     modal.classList.add('modalout');
+}
+
+// Scroll to top
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
