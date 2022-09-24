@@ -435,8 +435,9 @@ footer p:not(.disclaimer p) {
 
 .hero .crosshair {
     position: absolute;
-    top: 38%;
-    left: 45.25%;
+    top: 30%;
+    left: 43.5%;
+    transform: translate(-50%, -0%);
     width: 120px;
     height: auto;
     opacity: .8;
@@ -1216,4 +1217,250 @@ footer p:not(.disclaimer p) {
 
 .borders:after {
     bottom: -1px
+}
+
+/* Responsiveness: width */
+
+@media (max-width: 1269px) {
+    .hero .npc {
+        left: 20px;
+        width: 300px;
+        font-size: 12px;
+    }
+
+    .hero .npc img {
+        width: 85px;
+    }
+
+    .hero .radar {
+        right: 12px;
+        width: 92px;
+    }
+
+    .hero .missile {
+        right: 115px;
+        font-size: 12px;
+    }
+
+    .target-status span {
+        font-size: 14px;
+    }
+
+    .call-to-action {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1060px) {
+    nav li a {
+        font-size: 12px;
+    }
+
+    footer {
+        padding-bottom: 250px;
+    }
+
+    .hero .crosshair {
+        width: 90px;
+    }
+}
+
+@media (max-width: 980px) {
+
+    .radar,
+    .hero .npc img {
+        display: none;
+    }
+
+    .hero .npc p {
+        position: relative;
+    }
+
+    .hero .missile {
+        right: 11px;
+        bottom: 15.4%;
+    }
+
+    .call-to-action,
+    #section3 blockquote {
+        width: 70%;
+    }
+
+    .ace7 {
+        width: 55%;
+    }
+
+    .caption {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 860px) {
+    .game-images {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+    }
+
+    .game-images .item {
+        flex: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .game-images .polaroid {
+        width: 75%;
+        height: auto;
+    }
+
+    .about-description {
+        width: 83%;
+    }
+
+    #section2 h2 {
+        margin-top: 85px;
+    }
+
+    #section2 h3 {
+        margin-bottom: 85px;
+    }
+
+    .tape {
+        left: -7px;
+    }
+
+    .caption {
+        font-size: 16px;
+    }
+
+    .ace7 {
+        width: 70%;
+    }
+
+    footer p:not(.disclaimer p) {
+        padding-top: 130px;
+        margin-bottom: 60px;
+    }
+
+    .creator {
+        margin-right: 15px;
+        margin-top: 25px;
+        font-size: 13px;
+    }
+
+    .socials {
+        margin-left: 15px;
+    }
+
+    footer {
+        padding-bottom: 300px;
+    }
+}
+
+@media (max-width: 710px) {
+
+    .companies a:nth-of-type(n+2) {
+        margin-left: 5px;
+    }
+
+    .call-to-action a {
+        position: relative;
+        float: right;
+    }
+
+    .call-to-action p {
+        position: relative;
+        margin-right: 110px;
+    }
+
+    #section2 h2 {
+        margin-top: 105px;
+    }
+
+    .creator {
+        display: none;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .socials a:nth-of-type(n+2) {
+        margin-left: 0px;
+    }
+
+    footer p:not(.disclaimer p) {
+        padding-top: 130px;
+    }
+
+    .disclaimer p {
+        width: 85%;
+    }
+}
+
+@media (max-width: 610px) {
+    .npc {
+        display: none;
+    }
+
+    .hero .missile {
+        right: 50%;
+        left: 0;
+        bottom: 10%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .caption {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 425px) {
+    .game-images .item {
+        flex: 100%;
+    }
+
+    .caption {
+        font-size: 16px;
+    }
+
+    .ace7 {
+        width: 90%;
+    }
+
+    .call-to-action,
+    #section3 blockquote {
+        width: 90%;
+    }
+
+    .call-to-action p {
+        margin-right: 80px;
+        left: 5%;
+    }
+
+    .call-to-action a {
+        right: 5%;
+    }
+
+    footer {
+        padding-bottom: 400px;
+    }
+
+    footer p:not(.disclaimer p) {
+        padding-top: 130px;
+        padding-bottom: 30px;
+    }
+
+    .disclaimer img {
+        width: 300px;
+    }
+
+    .top-btn .show-btn {
+        font-size: 12px;
+    }
 }
