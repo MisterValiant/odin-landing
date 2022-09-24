@@ -392,13 +392,13 @@ footer p:not(.disclaimer p) {
 }
 
 .hero .npc {
-    position: relative;
+    position: absolute;
+    left: 5.5%;
+    bottom: 14.3%;
     font-size: 15px;
-    margin-left: 60px;
-    margin-top: 30px;
     color: white;
-    width: 35%;
-    height: 25%;
+    width: 400px;
+    height: auto;
     opacity: .75;
 }
 
