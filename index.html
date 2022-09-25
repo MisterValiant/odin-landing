@@ -97,7 +97,8 @@
     </div>
 
     <!-- Scroll back to top -->
-    <button onclick="topFunction()" class="top-btn" title="Go to top">FLY UP <span><i class="ri-plane-line"></i></span></button>
+    <button onclick="topFunction()" class="top-btn" title="Go to top">FLY UP <span><i
+                class="ri-plane-line"></i></span></button>
 
     <!-- Main Content -->
     <header>
@@ -105,8 +106,8 @@
 
             <!-- Navigation: left -->
             <ul class="left-nav">
-                <li><a href="#section1">- Engage -</a></li>
-                <li><a href="#section2">= About =</a></li>
+                <li><a href="#section1" onclick="hideBurger()">- Engage -</a></li>
+                <li><a href="#section2" onclick="hideBurger()">= About =</a></li>
             </ul>
 
             <div class="logo-container">
@@ -120,10 +121,23 @@
 
             <!-- Navigation: right -->
             <ul class="right-nav">
-                <li><a href="#section3">= Gallery =</a></li>
+                <li><a href="#section3" onclick="hideBurger()">= Gallery =</a></li>
                 <li><a href="#footer" onclick="credits()">- Credits -</a></li>
             </ul>
         </nav>
+
+        <!-- Hamburger -->
+        <div class="burger">
+            <button class="hamburger hamburger--emphatic" onclick="toggleBurger()" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+        
+        <a class="secondary-logo" href="#section1">
+            <img width="500" height="191" src="images/logo-transparent.webp" alt="Odin Landing Logo">
+        </a>
     </header>
 
     <main>

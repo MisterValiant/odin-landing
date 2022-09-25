@@ -29,6 +29,10 @@ const topButton = document.querySelector('.top-btn');
 let targetDestroyed = 0;
 let targetMissed = 0;
 
+// Global: hamburger
+const domHeader = document.querySelector('header');
+const burgerBtn = document.querySelector('.burger button');
+
 // Remove default animation
 const nudgeAnimation = document.querySelector('.crosshair');
 nudgeAnimation.classList.remove('nudge');
@@ -65,6 +69,7 @@ function blink() {
     document.querySelector('html').classList.remove('no-overflow');
     document.querySelector('.hero').classList.add('blink3s');
     setTimeout(heroGUI, 2500);
+    hamburger();
 }
 
 function heroGUI() {
@@ -197,6 +202,7 @@ function credits() {
     modal.classList.remove('modalout');
     modal.classList.add('credits-modal');
     document.querySelector('.credits-modal').style.opacity = 1;
+    hideBurger();
 }
 
 function videoModal() {
@@ -224,3 +230,36 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// Hamburger
+window.addEventListener("resize", function () {
+    hamburger();
+});
+
+function hamburger() {
+    if (window.matchMedia("(max-width: 850px)").matches) {
+        domHeader.classList.add('ham');
+    } else {
+        domHeader.classList.remove('ham');
+    }
+}
+
+function toggleBurger() {
+    if (burgerBtn.classList.contains('is-active')) {
+        hideBurger();
+    } else {
+        burgerBtn.classList.add('is-active');
+        domHeader.classList.add('ham-active');
+    }
+}
+
+document.querySelector('main').addEventListener('click', hideBurger);
+
+function hideBurger() {
+    if (burgerBtn.classList.contains('is-active')) {
+        burgerBtn.classList.remove('is-active');
+        domHeader.classList.remove('ham-active');
+    }
+}
+
+
