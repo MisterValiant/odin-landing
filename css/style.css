@@ -896,7 +896,7 @@ footer p:not(.disclaimer p) {
 }
 
 .mistervaliant {
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 .mistervaliant img {
@@ -1070,6 +1070,7 @@ footer p:not(.disclaimer p) {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-left: 10px;
 }
 
 .cube div {
@@ -1356,6 +1357,12 @@ footer p:not(.disclaimer p) {
     footer {
         padding-bottom: 300px;
     }
+
+    .credits p:nth-of-type(2) {
+        top: 15%;
+        left: 5%;
+        right: 5%;
+    }    
 }
 
 @media (max-width: 710px) {
@@ -1418,6 +1425,10 @@ footer p:not(.disclaimer p) {
     .caption {
         font-size: 13px;
     }
+
+    .credits p:nth-of-type(2) {
+       font-size: large;
+    }    
 }
 
 @media (max-width: 425px) {
@@ -1463,6 +1474,11 @@ footer p:not(.disclaimer p) {
     .top-btn .show-btn {
         font-size: 12px;
     }
+
+    .promo-content img{
+        width: 350px;
+        height: auto;
+    }
 }
 
 /* Navigation Responsiveness */
@@ -1501,17 +1517,17 @@ header .burger {
 }
 
 .hamburger:hover {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .hamburger.is-active:hover {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-    background-color: aquamarine;
+    background-color:#1abc9c;
 }
 
 
@@ -1533,7 +1549,7 @@ header .burger {
 .hamburger-inner::after {
     width: 40px;
     height: 4px;
-    background-color: aquamarine;
+    background-color:#1abc9c;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
