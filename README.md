@@ -38,8 +38,11 @@ The main aim of Odin Landing is to better understand how to effectively make use
 <br/>
 
 ## 👨‍💻 Technologies Used
-<div align="center">
-  [![Tech](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
+
+<div align="left">
+
+  [![Technologies](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
+
 </div>
 
 <br/>
