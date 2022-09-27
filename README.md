@@ -14,7 +14,7 @@
 
 <br/>
 
->[![Generic badge](https://img.shields.io/badge/Project_Status:-Complete-<COLOR>.svg)](https://mistervaliant.github.io/odin-landing/)
+>[![Generic badge](https://img.shields.io/badge/Project_Status:-Deployed-<COLOR>.svg)](https://mistervaliant.github.io/odin-landing/)
 
 <br/>
 
