@@ -6,7 +6,7 @@
 
 <br/>
 
-# 🛦 Odin Landing
+# 🛩️ Odin Landing
 > Odin Landing is a webpage for the popular Playstation 2 video game, Ace Combat 5: The Unsung War.
 
 >Live demo:
